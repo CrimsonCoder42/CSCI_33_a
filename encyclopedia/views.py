@@ -8,5 +8,5 @@ def index(request):
         "entries": util.list_entries()
     })
 
-def wiki(request):
-    return render(request, "entries/CSS.md")
+def add(request):
+    return render(request, "encyclopedia/new_page.html")

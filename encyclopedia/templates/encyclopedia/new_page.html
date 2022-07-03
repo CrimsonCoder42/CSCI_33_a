@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "encyclopedia/layout.html" %}
 
-</body>
-</html>
+{% block title %}
+    Add
+{% endblock %}
+
+{% block body %}
+    <h1>Add New Wiki</h1>
+
+        <form action="" id="new_entry" >
+            <input type="text" name="title" placeholder="Title">
+            <br>
+            <textarea></textarea>
+            <input type="submit">
+
+        </form>
+
+{% endblock %}
