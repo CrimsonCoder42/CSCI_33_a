@@ -8,5 +8,5 @@ def index(request):
         "entries": util.list_entries()
     })
 
-def add(request):
+def add_article(request):
     return render(request, "encyclopedia/new_page.html")
