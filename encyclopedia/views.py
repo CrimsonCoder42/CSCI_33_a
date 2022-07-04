@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.files.storage import default_storage
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django import forms
@@ -56,6 +57,11 @@ def edit_article(request, article):
             title = edit_article.cleaned_data["title"]
             content = edit_article.cleaned_data["content"]
             util.save_entry(title, content)
+
+            # delete old file as new file is created
+
+            orig_article = f"entries/{article}.md"
+            default_storage.delete(orig_article)
             return HttpResponseRedirect(reverse("article", kwargs={'article': title}))
         else:
             return render(request, "encyclopedia/error_try.html")
