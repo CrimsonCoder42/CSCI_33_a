@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block body %}
+
+   <h4> Error this article already exists </h4>
+
+<br>
+    <a href="{% url 'add' %}"> Create new entry </a>
+
+{% endblock %}

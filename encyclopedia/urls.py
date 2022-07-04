@@ -7,7 +7,7 @@ urlpatterns = [
     # adds a new entry
     path("add_article/", views.add_article, name="add"),
     # search article
-    path("search_article/", views.search_article, name="search"),
+    path("search", views.search_article, name="search"),
     # directs user to desired article.
     path("wiki/<str:article>", views.article, name="article"),
     # edit article

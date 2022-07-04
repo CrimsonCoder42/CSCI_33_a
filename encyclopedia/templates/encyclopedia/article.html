@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+{{ article_title }}
+{% endblock %}
+
+{% block body %}
+
+<!--must use safe tag in django -->
+<!--Haki Benita. (2020, March 30). -->
+<!--Using markdown in Django. -->
+<!--Haki Benita Full Atom. Retrieved July 3, 2022, -->
+<!--from https://hakibenita.com/django-markdown -->
+
+   {{ article|safe }}
+<a href="/wiki/{{ article_title }}/edit"><button>Edit</button></a>
+{% endblock %}
